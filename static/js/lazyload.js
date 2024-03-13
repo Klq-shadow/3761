@@ -171,6 +171,7 @@ $(document).ready(function () {
   })(jQuery, window, document);
 
   if ($(".lazy").size() >= 0) {
+    console.log($(".lazy"));
     $("img.lazy").lazyload({ effect: "fadeIn", threshold: 200, failurelimit: 20, skip_invisible: false });
   }
 });

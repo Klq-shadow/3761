@@ -5,8 +5,8 @@ $(function () {
   var Viewer = window.Viewer;
 
   var console = window.console || { log: function () {} };
-  var pictures = document.querySelector(".article_main");
-  var toggles = document.querySelector(".Gmsliderwrap");
+  var pictures = document.querySelector("#article_main");
+  // var toggles = document.querySelector(".Gmsliderwrap");
 
   var options = {
     // inline: true,
@@ -51,7 +51,7 @@ $(function () {
     },
   };
   var viewer1 = new Viewer(pictures, options);
-  var viewer2 = new Viewer(toggles, options);
+  // var viewer2 = new Viewer(toggles, options);
 
   function toggleButtons(mode) {
     var targets;

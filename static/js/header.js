@@ -8,6 +8,27 @@ var header = `<div class="head_cont">
     <a href="heji.html" class="">合集专题</a>
     <a href="news.html" class="">资讯攻略</a>
   </div>
+
+  <div class="current_box enable_switch">
+    <div class="current_lang">English</div>
+    <div class="menu_list" style="display: none">
+      <div class="menu_body">
+        <ul>
+          <li class="lang_menu" data="en-us" data-url="https://download.juxia.com/">
+            <a class="flag-icon flag-country flag_country_us" href="" hreflang="en">English</a>
+          </li>
+          <li class="lang_menu" data="vi" data-url="https://download.juxia.com/vi">
+            <a class="flag-icon flag-country flag_country_us" href="" hreflang="vi">Việt Nam</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-box">
+    <input type="text" value="" class="form-control keyword js-keyword special search-keyword" name="keyword" autocomplete="off" data-page="home" placeholder="3761" />
+    <span data-url="" class="btn btn-default search-button search-block"></span>
+  </div>
 </div>
 </div>`;
 //@牛超 底下这段js代码可以删除

@@ -302,7 +302,7 @@ body {
 
 .head_cont .nav_item a {
     float: left;
-    margin-left: 70px;
+    margin-left: 40px;
     font-weight: bold;
     font-size: 20px;
     color: #333;
@@ -3300,4 +3300,151 @@ body {
 
 .Mintitle {
     margin-top: 15px;
+}
+
+.Min3 .w100 {
+    width: 100%;
+    height: auto;
+}
+
+.Min3 .M3_L .w100 {
+    width: 100%;
+    height: auto;
+}
+
+.search_t .Mintitle strong {
+    font-size: 30px;
+}
+
+/* 顶部搜索 */
+
+.search-box {
+    box-sizing: border-box;
+    float: right;
+    position: relative;
+    margin-top: 30px;
+}
+
+.form-control {
+    box-sizing: border-box;
+    height: 34px;
+    padding: 6px 12px;
+    padding-right: 30px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+    border-color: #ff884d;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(224, 125, 32, 0.6);
+}
+
+
+.search-button {
+    position: absolute;
+    background: url(../images/serach.png) no-repeat center;
+    background-size: 33px 29px;
+    /* top: 24px; */
+    right: 0;
+    border: none;
+    height: 33px;
+    width: 37px;
+}
+
+/* 语言切换 */
+.current_box {
+    float: right;
+    line-height: 28px;
+    padding: 0 10px;
+    position: relative;
+    background-color: #ff884d;
+    border: 1px solid #E7E7E7;
+    /* display: inline-block; */
+    margin: 30px 40px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.current_lang {
+    min-width: 65px;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+.current_lang::after {
+    content: " ";
+    position: absolute;
+    right: -6px;
+    top: 12px;
+    opacity: .4;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #000;
+}
+
+.current_lang:hover::after {
+    transform: rotate(180deg);
+}
+
+.menu_list {
+    position: absolute;
+    display: none;
+    background: #ff884d;
+    /* bottom: 40px; */
+    -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.15));
+    left: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    z-index: 999999;
+}
+
+.menu_body {
+    display: block;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.menu_body ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    overflow-y: auto;
+}
+
+.menu_body ul li {
+    width: 100%;
+}
+
+.menu_body ul li:hover {
+    background-color: #ff6b21;
+}
+
+.menu_body a {
+    /* width: 100%; */
+    display: block;
+    white-space: nowrap;
+    background: none;
+    padding: 5px;
+    height: auto;
+    line-height: 26px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
 }

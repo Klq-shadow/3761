@@ -54,9 +54,16 @@
         </div>
       </div>
       <div class="downloadinfo">
-        <a href="https://down.bygwald.com:2233/s_pYBBaD0/xWVPwm3tqnILKBU" referrerpolicy="unsafe-url" rel="nofollow" class="btn"> 安卓版下载 </a>
-        <div class="ewm" id="qrcode" url="https://down.bygwald.com:2233/s_pYBBaD0/xWVPwm3tqnILKBU"></div>
+        <div class="az_down">
+          <a href="https://down.bygwald.com:2233/s_pYBBaD0/xWVPwm3tqnILKBU" referrerpolicy="unsafe-url" rel="nofollow" class="btn"> 安卓版下载 </a>
+          <div class="ewm" id="qrcode" url="https://down.bygwald.com:2233/s_pYBBaD0/xWVPwm3tqnILKBU" style="display: none"><span>手机扫描下载</span></div>
+        </div>
+        <div class="ios_down">
+          <a href="https://down.bygwald.com:2233/s_pYBBaD0/xWVPwm3tqnILKBU" referrerpolicy="unsafe-url" rel="nofollow" class="btn"> 苹果下载 </a>
+          <div class="ewm" id="qrcode2" url="https://down.bygwald.com:2233/s_pYBBaD0/xWVPwm3tqnILKBU" style="display: none"><span>手机扫描下载</span></div>
+        </div>
       </div>
+
       <div class="scorebox">
         <span>评分</span>
         <strong>8.6</strong>
@@ -472,4 +479,30 @@
       document.write(footer);
     </script>
   </body>
+  <script>
+    // 获取元素
+    var azDown = document.querySelector(".az_down");
+    var iosDown = document.querySelector(".ios_down");
+
+    // 监听鼠标悬停事件
+    azDown.addEventListener("mouseover", function () {
+      var azEwm = azDown.querySelector(".ewm");
+      azEwm.style.display = "block";
+    });
+
+    azDown.addEventListener("mouseout", function () {
+      var azEwm = azDown.querySelector(".ewm");
+      azEwm.style.display = "none";
+    });
+
+    iosDown.addEventListener("mouseover", function () {
+      var iosEwm = iosDown.querySelector(".ewm");
+      iosEwm.style.display = "block";
+    });
+
+    iosDown.addEventListener("mouseout", function () {
+      var iosEwm = iosDown.querySelector(".ewm");
+      iosEwm.style.display = "none";
+    });
+  </script>
 </html>

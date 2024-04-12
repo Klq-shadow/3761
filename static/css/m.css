@@ -366,6 +366,17 @@ body {
     line-height: 30px;
 }
 
+.Minwrap.downl_head {
+    overflow: visible;
+}
+
+.Minwrap.downl_head::before,
+.Minwrap.downl_head::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .Minwrap .Mintitle .tags {
     float: left;
     margin-top: 1px;
@@ -2408,7 +2419,7 @@ body {
     float: left;
     width: 156px;
     height: 156px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     margin-right: 20px;
 }
 
@@ -2491,15 +2502,6 @@ body {
     display: block;
 }
 
-.downl_head .downloadinfo .ewm {
-    width: 100%;
-    height: 100px;
-    background: #f7f7f7;
-    border-radius: 4px;
-    border: 1px solid #e6e2e1;
-    margin-top: 10px;
-}
-
 .downl_head .downloadinfo .ewm img {
     display: block;
     width: 100%;
@@ -2509,6 +2511,46 @@ body {
     font-size: 12px;
     text-indent: -14px;
     font-weight: bold;
+}
+
+.downloadinfo .az_down {
+    margin-bottom: 10px;
+}
+
+.downloadinfo .az_down,
+.downloadinfo .ios_down {
+    position: relative;
+}
+
+.downloadinfo .az_down #qrcode,
+.downloadinfo .ios_down #qrcode2 {
+    position: absolute;
+    top: -22px;
+    left: 130px;
+    width: 175px;
+    height: 175px;
+    background: url(../images/sslc_pg.png) no-repeat 0 -244px;
+    text-align: center;
+    overflow: hidden;
+    /* display: none; */
+    z-index: 9999;
+}
+
+.downloadinfo .az_down #qrcode span,
+.downloadinfo .ios_down #qrcode2 span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    line-height: 36px;
+}
+
+.downloadinfo .az_down #qrcode img,
+.downloadinfo .ios_down #qrcode2 img {
+    width: 122px;
+    height: 122px;
+    display: block;
+    margin: 0px 0 7px 28px;
 }
 
 .downl_head .scorebox {

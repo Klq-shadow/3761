@@ -133,6 +133,12 @@ $(function () {
       makeQRCode(id, url);
       $(this).removeAttr("title");
     });
+    $("#qrcode2").each(function () {
+      var url = $(this).attr("url");
+      var id = $(this).attr("id");
+      makeQRCode(id, url);
+      $(this).removeAttr("title");
+    });
     /* $("#appDetailQrcode2").each(function () {
     var url = $(this).attr("url");
     var id = $(this).attr("id");

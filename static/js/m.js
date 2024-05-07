@@ -110,17 +110,6 @@ $(function () {
     });
   }
 
-  if ($(".Gmslider").size() == 1) {
-    new Swiper(".Gmslider", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
-
   $(".detaile_tab a").click(function (e) {
     $("body,html").animate({ scrollTop: $("#" + $(this).attr("data-pos")).offset().top }, 300);
   });
@@ -152,3 +141,27 @@ $(function () {
     }
   });
 });
+
+$(document).ready(function() {
+  if ($(".Gmslider").length === 1) {
+    // 监听所有图片加载完成事件
+    $(".Gmslider img").on("load", function() {
+      // 确保所有图片加载完成后再执行初始化
+      if ($(".Gmslider img").length === $(".Gmslider img").filter(":visible").length) {
+        // 所有图片已加载完成，初始化 Swiper
+        new Swiper(".Gmslider", {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      }
+    }).each(function() {
+      // 处理已经加载完成的图片
+      if (this.complete) $(this).load();
+    });
+  }
+});
+
